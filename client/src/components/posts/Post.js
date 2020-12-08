@@ -7,7 +7,7 @@ import "./post.scss";
 const Post = ({ post }) => {
    const postDate = getFormattedDate(post.date);
    return (
-      <Card className="deckStyle" style={{ border: "none" }}>
+      <Card className="deckStyle" style={{ border: "none", margin: 20 }}>
          <Card.Body className="postCover">
             <Card.Title className="text-center p-5">{post.title}</Card.Title>
          </Card.Body>

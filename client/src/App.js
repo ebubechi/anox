@@ -37,7 +37,7 @@ const App = () => {
          <BrowserRouter>
             <ProgressBar />
             <Navbar />
-            <Switch>
+            <Switch>    
                <Route exact path="/" render={()=>(true ? (<Redirect to="/blog/uzzi"/>): "")} />
                <Route path="/login" component={LoginPage} />
                <Route path="/signup" component={SignUpPage} />

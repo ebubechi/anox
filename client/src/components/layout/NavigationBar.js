@@ -12,17 +12,25 @@ const Navigationbar = ({ auth, onClick }) => (
       style={{ minHeight: "4rem" }}
    >
       <Link to="/blog">
-         <Navbar.Brand>
-            <img
+         <Nav>
+         <img
+               src="https://raw.githubusercontent.com/ebubechi/anox/3e09b55c0d83c5dc2d19373e964e36995499c5dd/anoxs.svg"
+               style={{ height: 30, width: 40 }}
+               className="d-inline-block align-top"
+               alt=""
+            />
+         </Nav>
+         {/* <Navbar.Brand>
+            <img https://raw.githubusercontent.com/ebubechi/anox/3e09b55c0d83c5dc2d19373e964e36995499c5dd/Anox.svg
                src="https://react-bootstrap.github.io/logo.svg"
                style={{ height: 30, width: 30 }}
                className="d-inline-block align-top"
                alt=""
             />
-            {" Bloggy "}
-         </Navbar.Brand>
+            {" Anox "}
+         </Navbar.Brand> */}
       </Link>
-      <Nav className="ml-auto">
+      {/* <Nav className="ml-auto">
          {auth ? (
             <Link to="/logout">
                <Button
@@ -40,7 +48,7 @@ const Navigationbar = ({ auth, onClick }) => (
                </Button>
             </Link>
          )}
-      </Nav>
+      </Nav> */}
    </Navbar>
 );
 
