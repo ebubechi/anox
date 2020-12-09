@@ -16,7 +16,7 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
             </Col>
          </Row>
          <Row className="my-4" style={{ whiteSpace: "pre-wrap" }}>
-            <Col><ReactMarkdown>{post.body}</ReactMarkdown></Col>
+            <Col><ReactMarkdown escapeHtml={false}>{post.body}</ReactMarkdown></Col>
          </Row>
          <Row className="d-flex flex-column font-italic footerStyle">
             <Col>Created by : {post.author}</Col>

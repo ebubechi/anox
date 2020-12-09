@@ -14,14 +14,14 @@ const Navigationbar = ({ auth, onClick }) => (
       <Link to="/blog">
          <Nav>
          <img
-               src="https://raw.githubusercontent.com/ebubechi/anox/3e09b55c0d83c5dc2d19373e964e36995499c5dd/anoxs.svg"
-               style={{ height: 30, width: 40 }}
+               src="https://raw.githubusercontent.com/ebubechi/anox/76e9f9d4f5b61f85ba3a7ac4dd9732eeceaae080/anoxs.svg"
+               style={{ height: 50, width: 50 }}
                className="d-inline-block align-top"
                alt=""
             />
          </Nav>
          {/* <Navbar.Brand>
-            <img https://raw.githubusercontent.com/ebubechi/anox/3e09b55c0d83c5dc2d19373e964e36995499c5dd/Anox.svg
+            <img 
                src="https://react-bootstrap.github.io/logo.svg"
                style={{ height: 30, width: 30 }}
                className="d-inline-block align-top"
@@ -30,7 +30,7 @@ const Navigationbar = ({ auth, onClick }) => (
             {" Anox "}
          </Navbar.Brand> */}
       </Link>
-      {/* <Nav className="ml-auto">
+      <Nav className="ml-auto">
          {auth ? (
             <Link to="/logout">
                <Button
@@ -41,14 +41,17 @@ const Navigationbar = ({ auth, onClick }) => (
                   Logout
                </Button>
             </Link>
-         ) : (
-            <Link to="/login">
-               <Button variant="outline-light" className="mr-sm-2">
-                  Login
-               </Button>
-            </Link>
-         )}
-      </Nav> */}
+         ) : (<link></link>)
+         
+         // (
+         //    <Link to="/login">
+         //       <Button variant="outline-light" className="mr-sm-2">
+         //          Login
+         //       </Button>
+         //    </Link>
+         // )
+      }
+      </Nav>
    </Navbar>
 );
 
