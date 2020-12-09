@@ -7,7 +7,19 @@ import "./post.scss";
 
 const ViewPost = ({ post, auth, onDelete, onEdit }) => {
    const postDate = getFormattedDate(post.date);
-   const contentBody = `# ${post.body}`;
+   // const contentBody = `# ${post.body}`;
+
+   const renderers = {
+      //This custom renderer changes how images are rendered
+      //we use it to constrain the max width of an image to its container
+      image: ({ alt, src, title }) => (
+          <img 
+              alt={alt} 
+              src={src} 
+              title={title} 
+              style={{ maxWidth: 475 }}  />
+      ),
+  };
    return (
       <Container className="mt-4 viewPost">
          <Row>
@@ -16,7 +28,11 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
             </Col>
          </Row>
          <Row className="my-4" style={{ whiteSpace: "pre-wrap" }}>
-            <Col><ReactMarkdown escapeHtml={false}>{post.body}</ReactMarkdown></Col>
+            <Col>
+               <ReactMarkdown escapeHtml={false} renderers={renderers}>
+                  {post.body}
+               </ReactMarkdown>
+            </Col>
          </Row>
          <Row className="d-flex flex-column font-italic footerStyle">
             <Col>Created by : {post.author}</Col>
