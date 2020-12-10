@@ -17,7 +17,7 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
               alt={alt} 
               src={src} 
               title={title} 
-              style={{ maxWidth: 475 }}  />
+              style={{ minWidth: 1075, minHeight: 500 }}  />
       ),
   };
    return (
