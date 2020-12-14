@@ -16,9 +16,9 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
           <img 
               alt={alt} 
               src={src} 
-              title={title} 
-              style={{ minWidth: 1075, minHeight: 500 }}  />
-      ),
+              title={title}  
+              style={{ minWidth: '96.5%', minHeight: '100%' }}  />
+      ),  
   };
    return (
       <Container className="mt-4 viewPost">
@@ -39,7 +39,7 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
             <Col>Date: {postDate}</Col>
          </Row>
          {auth && (
-            <Row className="mt-4">
+            <Row className="mt-4" style={{padding: '5px'}}>
                <Col className="text-center">
                   <Button
                      className="mr-2"
@@ -54,7 +54,7 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
                </Col>
             </Row>
          )}
-      </Container>
+      </Container> 
    );
 };
 
